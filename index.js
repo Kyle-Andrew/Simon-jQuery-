@@ -17,12 +17,13 @@ $(document).keypress(function (event) {
 
 function gameOver() {
   $("h1").html('Game Over<br><br> Press "A" Key to Restart');
-  gameInProgress = false;
-
-  level = 0;
-  correctInputs = 0;
+ 
   generatedSequence = [];
 
+  level = 0;
+  gameInProgress = false;
+  correctInputs = 0;
+  
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function () {
@@ -41,7 +42,6 @@ function generateNextTile() {
 
   playSound(newTile);
   $("#" + newTile).fadeOut(75).fadeIn(75);
-  // tileAnimate(newTile);
 
   generatedSequence.push(newTile);
 }
