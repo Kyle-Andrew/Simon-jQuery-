@@ -15,6 +15,13 @@ $(document).keypress(function (event) {
   }
 });
 
+$("h1").click(function (event) {
+  if (gameInProgress === false) {
+    gameInProgress = true;
+    generateNextLevel();
+  }
+});
+
 function gameOver() {
   $("h1").html('Game Over<br><br> Press "A" Key to Restart');
  
