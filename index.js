@@ -74,6 +74,7 @@ function tileAnimate(tileID) {
 
 function playSound(filename) {
   var sound = new Audio("./sounds/" + filename + ".mp3");
+  sound.volume = 0.2;
   sound.play();
 }
 
